@@ -1,0 +1,293 @@
+:root {
+  --primary: #DF585A;
+  --secondary: #FCE4D9;
+  --thernary: #71AC9A;
+  --bg: #A5D2C0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+main {
+  margin-bottom: 1.5rem;
+}
+
+input,
+button {
+  border: none;
+}
+
+section button {
+  padding: .5rem;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--primary);
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--secondary);
+
+}
+
+
+/* INPUT SECTION */
+section.input-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section h2 {
+  text-align: center;
+  margin: .5rem auto 0;
+  padding: 1rem;
+  color: var(--primary);
+  background-color: var(--secondary);
+  font-size: 1.2rem;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+section #formInputBook {
+  margin: auto;
+  padding: 2rem;
+  width: 68vw;
+  background-color: var(--secondary);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.judul,
+.author,
+.years {
+  display: flex;
+  flex-direction: column;
+}
+
+.judul label,
+.author label,
+.years label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  color: var(--thernary);
+}
+
+.judul input,
+.author input,
+.years input {
+  margin-bottom: 1.5rem;
+  padding: .3rem;
+}
+
+.input-check {
+  margin: 1rem 0;
+}
+
+.input-check label {
+  font-weight: 600;
+  color: var(--thernary);
+}
+
+.input-section button {
+  padding: 1rem;
+  margin: 1rem auto;
+  color: var(--secondary);
+  background-color: var(--thernary);
+  transition: .10s;
+}
+
+.input-section button:active {
+  background-color: var(--primary);
+}
+
+.input-section button span {
+  font-weight: 700;
+}
+
+
+/* SEARCH SECTION */
+section.search-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-section form#searchBook {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  width: 68vw;
+  background-color: var(--secondary);
+  border-radius: 8px;
+}
+
+.search-section form#searchBook label {
+  color: var(--thernary);
+  font-weight: 600;
+}
+
+.search-section form#searchBook input {
+  padding: .5rem;
+  margin: 0 .5rem;
+  width: 100%;
+}
+
+section form#searchBook button {
+  background-color: var(--thernary);
+  color: var(--secondary);
+}
+
+section form#searchBook button:hover {
+  background-color: var(--primary);
+}
+
+
+/* SECTION BOOK SHELF */
+section.book_shelf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book_shelf .book_list {
+  padding: 3rem;
+  width: 68vw;
+  background-color: var(--secondary);
+  border-radius: 8px;
+}
+
+.book_shelf article {
+  padding: 1rem;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+
+.book_shelf .book_list .book_item h3,
+p {
+  font-size: 1.2rem;
+}
+
+.book_shelf .book_list .book_item .action .green {
+  background-color: var(--thernary);
+  margin-right: .2rem;
+  color: var(--secondary);
+}
+
+.book_shelf .book_list .book_item .action .red {
+  margin-left: .2rem;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.book_shelf .book_list .book_item .action .blue {
+  margin-left: .2rem;
+  background-color: orchid;
+  color: var(--secondary);
+}
+
+
+/* modal Tombol yes or no */
+.modal-yes-no {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+}
+
+.modal-container {
+  position: relative;
+  background-color: var(--secondary);
+  color: var(--thernary);
+  margin: auto;
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: 30vw;
+  height: 20vh;
+  border-radius: 8px;
+}
+
+.modal-container h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: .9;
+  margin-bottom: 2rem;
+}
+
+.modal-container .btnOptional {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnOptional button {
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  border-radius: 5px;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.btnOptional #btnYes {
+  background-color: var(--primary);
+}
+
+.btnOptional #btnNo {
+  background-color: var(--thernary);
+}
+
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+
+  .modal-container {
+    width: 50vw;
+    height: 10vw;
+  }
+
+
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 65%;
+  }
+
+  .modal-container {
+    width: 55vw;
+    height: 10vh;
+  }
+
+  button,
+  span {
+    font-size: 70%;
+  }
+
+}

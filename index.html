@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Pengola Data Menggunakan DOM & Web-Storage</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Bookshelf Apps </h1>
+  </header>
+  <main>
+    <section class="input-section">
+      <h2>Masukkan Buku Baru</h2>
+      <!-- PERBAIKI FORM ACTION NYA KETIKA DI SUBMIT DATA YANG ADA DIDALAM INPUTAN TERHAPUS -->
+      <form action="#" id="formInputBook">
+        <div class="judul">
+          <label for="inputBookTitle">Judul</label>
+          <input type="text" name="inputBookTitle" id="inputBookTitle" required>
+        </div>
+        <div class="author">
+          <label for="inputBookPenulis">Penulis</label>
+          <input type="text" name="inputBookPenulis" id="inputBookPenulis">
+        </div>
+        <div class="years">
+          <label for="inputBookTahun">Tahun</label>
+          <input type="number" name="inputBookTahun" id="inputBookTahun">
+        </div>
+        <div class="input-check">
+          <label for="inputBookReadDone">Selesai Baca</label>
+          <input type="checkbox" id="inputBookReadDone">
+        </div>
+        <button id="bookSubmit" type="submit">"Masukkan Buku Ke Rak" <span>Belum / Selesai Dibaca</span></button>
+      </form>
+    </section>
+
+    <section class="search-section">
+      <h2>Cari Buku (Optional)</h2>
+      <form id="searchBook">
+        <label for="searchBookTitle">Judul</label>
+        <input type="text" id="searchBookTitle">
+        <button id="searchSubmit" type="submit">Cari</button>
+      </form>
+    </section>
+
+    <section class="book_shelf">
+      <h2>Belum Selesai Dibaca</h2>
+      <div id="inComplateBookShelfList" class="book_list">
+
+      </div>
+    </section>
+
+    <section class="book_shelf">
+      <h2>Selesai Dibaca</h2>
+      <div id="complateBookShelfList" class="book_list">
+
+      </div>
+    </section>
+  </main>
+
+  <!-- modal Tombol Delete Yes or No -->
+  <div class="modal-yes-no" id="modal">
+    <div class="modal-container">
+      <h1>Are You Sure Want to Delete this Book..?</h1>
+      <div class="btnOptional">
+        <button id="btnYes">Yes</button>
+        <button id="btnNo">No</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
